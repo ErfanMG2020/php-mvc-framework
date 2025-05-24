@@ -1,0 +1,7 @@
+RewriteEngine on
+
+RewriteCond %{REQUEST_METHOD} !-d
+RewriteCond %{REQUEST_METHOD} !-f
+RewriteCond %{REQUEST_METHOD} !-l
+
+RewriteRule ^(.+) index.php?path=$1 [QSA,L]
